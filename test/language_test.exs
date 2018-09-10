@@ -2,7 +2,7 @@ defmodule ItemsTest do
   use ExUnit.Case
   doctest Language
 
-  describe "translate/2" do
+  describe "translate/2 turns words into rocks" do
     test "la in banana people language" do
       count = Language.translate(Language.BananaPeople, "na")
       assert Enum.count(count) == 1
