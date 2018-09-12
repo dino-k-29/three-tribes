@@ -1,9 +1,10 @@
 defmodule Language.HandPeople do
   def clap do
-    %Rock{}
+    [%Rock{}]
   end
 
   def thump do
     [clap(), clap(), clap(), clap()]
+    |> List.flatten()
   end
 end
