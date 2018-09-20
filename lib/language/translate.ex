@@ -1,4 +1,4 @@
-defmodule Language do
+defmodule Language.Translate do
   def from_rocks(language, rocks) when is_list(rocks) do
     word_value = fn language, word ->
       apply(language, word, []) |> Enum.count()
@@ -21,7 +21,7 @@ defmodule Language do
     [word | remaining_words] = words
 
     rock_count = rocks |> Enum.count()
-    word_value = language |> Language.to_rocks(word |> to_string) |> Enum.count()
+    word_value = language |> to_rocks(word |> to_string) |> Enum.count()
 
     word_can_be_used = rock_count >= word_value
     word_repeat_count = div(rock_count, word_value)
