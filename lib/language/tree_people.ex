@@ -1,4 +1,11 @@
 defmodule Language.TreePeople do
+  @behaviour Tribe
+
+  @impl Tribe
+  def ordered_words do
+    ["tree", "scratch"]
+  end
+  
   def scratch do
     [%Rock{}]
   end

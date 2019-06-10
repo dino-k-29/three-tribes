@@ -1,4 +1,11 @@
 defmodule Language.HandPeople do
+  @behaviour Tribe
+
+  @impl Tribe
+  def ordered_words do
+    ["thump", "clap"]
+  end
+  
   def clap do
     [%Rock{}]
   end

@@ -1,4 +1,11 @@
 defmodule Language.BananaPeople do
+  @behaviour Tribe
+
+  @impl Tribe
+  def ordered_words do
+    ["la", "ba", "na"]
+  end
+  
   def na do
     [%Rock{}]
   end
